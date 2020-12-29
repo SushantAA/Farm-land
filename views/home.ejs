@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+</head>
+<body>
+    <h1>hello mongoose ejs express</h1>
+    <% for( let a of all_product){ %>
+        <div style="background-color: aquamarine; width: 100px; display: inline-block;">
+            <h3><%= a.name %></h3>
+            <a href="/<%= a._id %> "> details</a>
+            <a href="/<%=a._id %>/edit">edit</a>
+        </div>
+    <% } %>
+    <br>
+    <a href="/new" style="background-color: yellow;">add product</a>
+    <br>
+    <a href="/">all products</a>
+</body>
+</html>

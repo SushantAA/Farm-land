@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>one product details</title>
+</head>
+<body>
+    <h3><%= product_data.name %> </h3>
+    <h5><%= product_data.price %> </h5>
+    <h5><%= product_data.cata %> </h5>
+    <a href="/">all products</a>
+    <form action="/<%=product_data._id%>?_method=DELETE" method="POST">
+        <button>delete</button>
+    </form>
+    <a href="/?cata=<%= product_data.cata %>">cata sort</a>
+</body>
+</html>
